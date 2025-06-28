@@ -1,0 +1,195 @@
+/* Base styles and fonts */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+}
+h1, h2, h3 {
+  font-family: Verdana, Geneva, sans-serif;
+  margin-bottom: 0.5em;
+}
+p, ul, li {
+  font-size: 1em;
+}
+
+/* Navbar styling */
+.navbar {
+  background-color: #2e8b57;  /* dark green */
+  color: #fff;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.navbar li {
+  margin: 5px 15px;
+}
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Hero section */
+#hero {
+  background: url("https://upload.wikimedia.org/wikipedia/commons/c/c8/Bengal_Tiger.jpg") no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  padding: 120px 20px;
+  position: relative;
+}
+#hero .hero-content {
+  background: rgba(0, 0, 0, 0.5);  /* translucent dark overlay for readability */
+  display: inline-block;
+  padding: 40px 20px;
+}
+#hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.3em;
+}
+#hero p {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+/* Section styles */
+section {
+  padding: 80px 20px 60px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+section h2 {
+  font-size: 1.8em;
+  color: #264d00;  /* dark olive green */
+  margin-bottom: 0.5em;
+  text-align: left;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 5px;
+}
+section p {
+  margin-bottom: 1em;
+}
+
+/* Image styles */
+.section-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto;
+  border: 0;
+}
+.image-left {
+  float: left;
+  max-width: 40%;
+  margin: 5px 20px 20px 0;
+}
+.image-right {
+  float: right;
+  max-width: 40%;
+  margin: 5px 0 20px 20px;
+}
+.image-fullwidth {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 30px 0;
+}
+
+/* Case studies layout */
+.case-study {
+  margin-bottom: 40px;
+  overflow: auto;  /* contain floated elements */
+}
+.case-study h3 {
+  font-size: 1.4em;
+  color: #2e4d2b; /* slightly different green */
+  margin-top: 0;
+}
+.case-study p {
+  text-align: justify;
+}
+.case-image {
+  max-width: 45%;
+  height: auto;
+}
+.case-study:nth-child(odd) .case-image {  /* odd case studies: float left */
+  float: left;
+  margin: 5px 20px 10px 0;
+}
+.case-study:nth-child(even) .case-image { /* even case studies: float right */
+  float: right;
+  margin: 5px 0 10px 20px;
+}
+
+/* Videos in call-to-action */
+#call-to-action .videos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 30px 0;
+}
+#call-to-action iframe {
+  border: none;
+  max-width: 100%;
+}
+#call-to-action .closing {
+  font-style: italic;
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  background-color: #2e8b57;
+  color: #fff;
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 0.9em;
+  margin-top: 40px;
+}
+footer a { color: #fff; text-decoration: underline; }
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+  }
+  .navbar li {
+    margin: 8px 0;
+  }
+  #hero {
+    padding: 100px 15px;
+    background-position: center center;
+  }
+  #hero .hero-content {
+    padding: 30px 15px;
+  }
+  #hero h1 {
+    font-size: 2em;
+  }
+  .image-left, .image-right, .case-image {
+    float: none;
+    display: block;
+    max-width: 100%;
+    margin: 20px auto;
+  }
+  .videos {
+    flex-direction: column;
+  }
+}
