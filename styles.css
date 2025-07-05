@@ -1,13 +1,14 @@
 /* Base styles and fonts */
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Nunito, Quicksand;
   line-height: 1.6;
   color: #333;
   background-color: #fff;
+  font-weight: 400;
 }
 h1, h2, h3 {
-  font-family: Verdana, Geneva, sans-serif;
+  font-family: Pacifico, cursive;
   margin-bottom: 0.5em;
 }
 p, ul, li {
@@ -46,17 +47,30 @@ p, ul, li {
 
 /* Hero section */
 #hero {
-  background: url("https://upload.wikimedia.org/wikipedia/commons/c/c8/Bengal_Tiger.jpg") no-repeat center center;
+  background: url("https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNTBydXp4ajJ6cjZ4amxvcG95b2M1anJndWpjdnV5M3I3bm53cDZhZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/UAxOiMCkOgmoU/giphy.gif") no-repeat center center;
   background-size: cover;
   color: #fff;
   text-align: center;
   padding: 120px 20px;
   position: relative;
 }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 #hero .hero-content {
   background: rgba(0, 0, 0, 0.5);  /* translucent dark overlay for readability */
   display: inline-block;
-  padding: 40px 20px;
+  padding: 80px 20px;
+  animation: fadeInUp 1.5s ease-out;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.6);
 }
 #hero h1 {
   font-size: 2.5em;
@@ -85,6 +99,56 @@ section p {
   margin-bottom: 1em;
 }
 
+/* ====== Palette 1: Earth & Forest ====== */
+#endangered {
+  background-color: #eafaf1;  /* Soft Moss */
+  padding: 60px 20px;
+}
+#endangered h2 {
+  color: #2e7d32;  /* Deep Forest Green */
+}
+#endangered p, #endangered li {
+  color: #333333;  /* Charcoal */
+}
+
+
+* ====== Palette 2: Ocean & Sky ====== */
+#snapshot {
+  background: linear-gradient(to bottom,rgb(74, 232, 253),rgb(0, 0, 0)); /* Sky Blue gradient */
+  padding: 60px 20px;
+}
+#snapshot h2 {
+  color: #0288d1;  /* Ocean Blue */
+}
+#snapshot p, #snapshot li {
+  color: #263238;  /* Deep Navy */
+}
+
+/* ====== Palette 3: Wildlife & Savanna ====== */
+#case-studies {
+  background-color: #fdf6ec;  /* Sand Beige */
+  padding: 60px 20px;
+}
+#case-studies h2 {
+  color: #bf360c;  /* Terracotta */
+}
+#case-studies p, #case-studies li {
+  color: #4e342e;  /* Dark Brown */
+}
+
+/* ====== Palette 4: Polar & Arctic ====== */
+#human-impact {
+  background-color: #e1f5fe;  /* Ice Blue */
+  padding: 60px 20px;
+}
+#human-impact h2 {
+  color: #607d8b;  /* Steel Blue */
+}
+#human-impact p, #human-impact li {
+  color: #37474f;  /* Slate Gray */
+}
+
+
 /* Image styles */
 .section-image {
   display: block;
@@ -108,6 +172,11 @@ section p {
   width: 100%;
   height: auto;
   margin: 30px 0;
+}
+
+img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
 }
 
 /* Case studies layout */
