@@ -18,8 +18,6 @@ This site aims to:
 ---
 
 
----
-
 ## 💡 Features
 
 - Fully responsive single-page layout  
